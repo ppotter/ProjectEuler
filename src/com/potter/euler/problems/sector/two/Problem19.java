@@ -77,11 +77,19 @@ public class Problem19 {
 	}
 	
 	public static void main(String[] args){
+		long start = System.currentTimeMillis();
 		Problem19 problem = new Problem19();
+		
+		
 		int countOne = problem.calculate();
-		int countTwo = Problem19.alternateCalculator();
 		System.out.println(countOne);
+		long next = (System.currentTimeMillis()-start);
+		System.out.println("Runtime = " + next + " ms");
+		System.out.println();
+		
+		int countTwo = Problem19.alternateCalculator();
 		System.out.println(countTwo);
+		System.out.println("Runtime = " + (System.currentTimeMillis()-next-start) + " ms");
 		
 	}
 	
