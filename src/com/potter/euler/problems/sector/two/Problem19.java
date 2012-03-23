@@ -6,6 +6,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import com.potter.euler.problems.ProblemUtilities;
+
 public class Problem19 {
 	private final int[] daysInMonth = {31,	28,	31,	30,	31,	30,	31,	31,	30,	31,	30,	31};
 	
@@ -18,17 +20,7 @@ public class Problem19 {
 	private Date end;
 	private Calendar c = Calendar.getInstance();
 	
-	public static boolean isLeapYear(int year){
-		if(year%400==0){
-			return true;
-		}
-		if(year%4 == 0){
-			if(year%100!=0){
-				return true;
-			}
-		}
-		return false;
-	}
+	
 	
 	public int calculate(){
 		int i=0;
@@ -39,7 +31,7 @@ public class Problem19 {
 					count++;
 				}
 			}
-			if(isLeapYear(c.get(Calendar.YEAR))){
+			if(ProblemUtilities.isLeapYear(c.get(Calendar.YEAR))){
 				if(c.get(Calendar.MONTH) == Calendar.FEBRUARY){
 					c.add(Calendar.DATE, 1);
 				}
