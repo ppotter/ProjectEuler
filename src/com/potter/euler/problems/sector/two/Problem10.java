@@ -13,7 +13,7 @@ public class Problem10 {
 				primes.add(i);
 			}
 		}
-		System.out.println("sum = " + ProblemUtilities.getSum(primes));
+		System.out.println("sum = " + ProblemUtilities.getSumLong(primes));
 		
 	}
 	

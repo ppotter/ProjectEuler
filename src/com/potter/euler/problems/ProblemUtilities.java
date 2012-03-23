@@ -46,11 +46,20 @@ public class ProblemUtilities {
 		return true;
 	}
 	
-	public static long getSum(ArrayList<Long> nums){
+	public static long getSumLong(Collection<Long> nums){
 		long result = 0;
 		for (Iterator iterator = nums.iterator(); iterator.hasNext();) {
 			Long long1 = (Long) iterator.next();
 			result += long1.longValue();
+		}
+		return result;
+	}
+	
+	public static int getSumInt(Collection<Integer> nums){
+		int result = 0;
+		for (Iterator iterator = nums.iterator(); iterator.hasNext();) {
+			Integer int1 = (Integer) iterator.next();
+			result += int1.longValue();
 		}
 		return result;
 	}
@@ -134,6 +143,17 @@ public class ProblemUtilities {
 		if(sqrt*sqrt == n){
 			result--;
 		}
+		return result;
+	}
+	
+	public static ArrayList<Integer> getDivisors(int n){
+		ArrayList<Integer> result = new ArrayList<Integer>();
+		for(int i = 1; i <= n/2; i++){
+			if(isDivisor(n, i)){
+				result.add(new Integer(i));
+			}
+		}
+		
 		return result;
 	}
 	
