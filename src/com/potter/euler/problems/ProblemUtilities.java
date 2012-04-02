@@ -64,6 +64,14 @@ public class ProblemUtilities {
 		return result;
 	}
 	
+	public static BigInteger getSumBig(Collection<Long> nums){
+		BigInteger result = new BigInteger("0");
+		for(Long l: nums){
+			result = result.add(new BigInteger(l.toString()));
+		}
+		return result;
+	}
+	
 	public static long sum(int min, int max){
 		long result = 0;
 		for(int i = min; i <= max; i++){
